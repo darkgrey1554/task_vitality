@@ -1,0 +1,12 @@
+﻿  Проверка исходных файлов
+  Удаленное копирование исходных файлов в "192.168.56.109"
+  Проверка архитектуры
+  Проверка архитектуры
+  Запуск удаленной сборки.
+  Компиляция исходных файлов:
+  main.cpp
+D:\CATE_WORK\task_vitality\process\process\main.cpp(75,52): warning : comparison of integer expressions of different signedness: ‘ssize_t’ {aka ‘long int’} and ‘std::__cxx11::basic_string<char>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+D:\CATE_WORK\task_vitality\process\process\main.cpp(75,52): warning :    75 |     if (write(block_file, str.c_str(), str.size()) != str.size())
+D:\CATE_WORK\task_vitality\process\process\main.cpp(75,52): warning :       |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+  Связывание объектов
+  process.vcxproj -> D:\CATE_WORK\task_vitality\process\process\bin\x64\Release\process.out

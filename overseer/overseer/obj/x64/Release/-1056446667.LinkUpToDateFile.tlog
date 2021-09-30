@@ -1,0 +1,1 @@
+g++ -o "/home/user/projects/overseer/bin/x64/Release/overseer.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack /home/user/projects/overseer/obj/x64/Release/main.o

@@ -1,0 +1,24 @@
+﻿  Проверка исходных файлов
+  Удаленное копирование исходных файлов в "192.168.56.109"
+  Проверка архитектуры
+  Проверка архитектуры
+  Запуск удаленной сборки.
+  Компиляция исходных файлов:
+  main.cpp
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(28,9): warning : unused variable ‘block_file’ [-Wunused-variable]
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(28,9): warning :    28 |     int block_file = 0;
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(28,9): warning :       |         ^~~~~~~~~~
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(29,9): warning : unused variable ‘res’ [-Wunused-variable]
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(29,9): warning :    29 |     int res = 0;
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(29,9): warning :       |         ^~~
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(30,10): warning : unused variable ‘simvol’ [-Wunused-variable]
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(30,10): warning :    30 |     char simvol = 0;
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(30,10): warning :       |          ^~~~~~
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(31,9): warning : unused variable ‘sys_error’ [-Wunused-variable]
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(31,9): warning :    31 |     int sys_error = 0;
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(31,9): warning :       |         ^~~~~~~~~
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(32,11): warning : unused variable ‘pid’ [-Wunused-variable]
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(32,11): warning :    32 |     pid_t pid;
+D:\CATE_WORK\task_vitality\overseer\overseer\main.cpp(32,11): warning :       |           ^~~
+  Связывание объектов
+  overseer.vcxproj -> D:\CATE_WORK\task_vitality\overseer\overseer\bin\x64\Release\overseer.out
