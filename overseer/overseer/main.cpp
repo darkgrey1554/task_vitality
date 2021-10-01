@@ -41,7 +41,7 @@ int main(int arg, char** args)
     }
 
 
-    /// --- DIFINING COMMAND --- ///
+    /// --- DEFINING COMMAND --- ///
     if (std::strcmp(args[1], "status") == 0)
     {
         Command = ListCommand::STATUS;
@@ -59,6 +59,9 @@ int main(int arg, char** args)
         std::cout << "COMMAND NOT DEFINED" << std::endl;
         return 0;
     }
+
+
+    /// --- PROCESSING --- ///
 
     if (Command == ListCommand::STATUS)
     {
@@ -100,6 +103,13 @@ int main(int arg, char** args)
     return 0;
 };
 
+/// <summary>
+/// get status of process
+/// </summary>
+/// <returns>
+/// 0 - error request
+/// >0 - pid of process  
+///  </returns>
 unsigned int GetStatus()
 {
     
@@ -108,6 +118,8 @@ unsigned int GetStatus()
     int sys_error;
     char simvol;
     std::string str_help;
+
+    /// --- opne block file --- ///
     block_file = open(block_file_name, O_RDONLY);
     if (block_file == -1)
     {
@@ -115,6 +127,7 @@ unsigned int GetStatus()
         return 0;
     }
 
+    /// --- try locking --- ///
     res = flock(block_file, LOCK_EX | LOCK_NB);
     if (res != 0)
     {
@@ -138,6 +151,7 @@ unsigned int GetStatus()
         return 0;
     }
 
+    /// --- read pid of process --- ///
     while (read(block_file, &simvol, 1) > 0)
     {
         str_help += simvol;
@@ -148,6 +162,12 @@ unsigned int GetStatus()
     return std::stoi(str_help.c_str());
 }
 
+/// <summary>
+/// kill process
+/// </summary>
+/// <param name="pid">
+/// pid of process
+/// </param>
 void KillProcess(int pid)
 {
     if (kill(pid, 9) != 0)
@@ -159,6 +179,9 @@ void KillProcess(int pid)
     return;
 }
 
+/// <summary>
+/// request on create of process
+/// </summary>
 void CreateProcess()
 {
     int pid_f;
